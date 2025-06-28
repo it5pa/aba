@@ -1,0 +1,9 @@
+title: Site
+sections:
+  pages:
+    template:
+      - home
+      - airsalon
+      - bookstop
+      - projectspace
+      - about

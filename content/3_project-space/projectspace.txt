@@ -1,0 +1,135 @@
+Title: ABA Projectspace
+
+----
+
+Currentexhibitions:
+
+-
+  title: "It's okay now"
+  artist: 'Isabelle Konrad & Gloria Müller'
+  start_date: '2025-06-09'
+  end_date: '2025-06-20'
+  image: []
+  description: 'It’s okay now is an autobiographical work that, through the practice of remembering, questions, analyzes, and compares the origins and identities of the two protagonists. Remembering serves not only as a means of reflection but also as a form of dreaming and processing the past. Fictional scenes and archival material intertwine to create a narrative that merges personal and collective memories.'
+
+----
+
+Next-exhibition: 0
+
+----
+
+Pastexhibitions:
+
+-
+  title: ''
+  artist: ''
+  start_date: ''
+  end_date: ''
+  image: []
+  description: ''
+
+----
+
+About:
+
+Our project space is located in the middle of a culturally diverse and lively district of Berlin. Here we offer artists an exhibition space where they can show their work to a wider audience and enter into an exchange with the local communities. We also offer artists at every stage of their career a space to explore and experiment. We hold workshops and readings to encourage exchange between communities and promote critical thinking through collaborative projects. The aim of our project space is to make connections and engage with artists, thinkers and institutions from different fields of knowledge and expertise.
+
+The space is available for hire to be used as an event space or studio space. If you would like to know more about the use of space or submit a proposal, please send us a request, and we will review it.
+Floor plan PDF.
+
+Since February 2020, ABA joined forces with uqbar, which was initiated by Antje Weitzel. Visit the uqbar archive (link: https://www.projectspace.uqbar-ev.de/ text:  here).
+
+----
+
+Image: - 'file://rpKZqHJyWQJNtUp3'
+
+----
+
+Floorplan: - 'file://W4XEUG6AIm1GjBtB'
+
+----
+
+Address:
+
+Schwedenstraße 16
+13357 Berlin
+
+----
+
+Email: amanda@airberlinalexanderplatz.de
+
+----
+
+Phone: 
+
+----
+
+Currentexhibition: 
+
+----
+
+Presentexhibitions:
+
+-
+  title: 'At your fingertips, I see my moving lips or not?'
+  artist: 'Sylvia Heinrich'
+  start_date: '2025-03-09'
+  end_date: '2025-03-30'
+  opening: '2025-05-08 18:00:00'
+  image: []
+  description: |-
+    I doubt, I am no longer sure: Did I see that or did I dream it? What did I see? Is there still a referent or is it just a sampling of ‘dusted’ images?
+
+    New technologies are rapidly changing the images of our world. We have to constantly relearn how to read and decipher them and come to terms with how power relations are constantly shifting. Bound to their fluid materiality, digital images can be intercepted, copied or modified at lightning speed at any time. Even the ‘original’ code of an image is not a static entity. Similar to a musical score, it is constantly reinterpreted by various technical devices and temporarily performed on their surfaces.
+
+    In the continuation of Sylvia Henrich's exhibition for EMOP Berlin 2023, an array of images and their production methods once again enter into dialogue —subjectivity meets autocorrection.
+
+    Just as Sabine Weier writes, through a ‘umstürzlerischen Umgang mit technischen Verfahren' ( subversive approach to technical processes ), the artist creates collisions that reveal underlying structures and open up new spaces of imagination.
+
+    Image credit
+    Title : GAME, 2003/2023,
+    Piezo Pigment Print, 120 x 90 cm (gerahmt)
+  date: '2025-03-09 00:00:00'
+-
+  title: ''
+  artist: ''
+  start_date: ''
+  end_date: ''
+  opening: ''
+  image: []
+  description: ''
+
+----
+
+Uuid: 2fpm5w16WWPG3UXJ
+
+----
+
+Layout:
+
+-
+  _id: fabcdb0f-3dec-4b9f-8a28-512e4a1c8002
+  image: []
+  description: |-
+    ABA is delighted present Sylvia Henrich’s exhibition for EMOP Berlin 2025 at Uqbar.
+
+    I doubt, I am no longer sure: Did I see that or did I dream it? What did I see? Is there still a referent or is it just a sampling of ‘dusted’ images?
+
+    New technologies are rapidly changing the images of our world. We have to constantly relearn how to read and decipher them and come to terms with how power relations are constantly shifting. Bound to their fluid materiality, digital images can be intercepted, copied or modified at lightning speed at any time. Even the ‘original’ code of an image is not a static entity. Similar to a musical score, it is constantly reinterpreted by various technical devices and temporarily performed on their surfaces.
+
+    In the continuation of Sylvia Henrich's exhibition for EMOP Berlin 2023, an array of images and their production methods once again enter into dialogue —subjectivity meets autocorrection.
+
+    Just as Sabine Weier writes, through a ‘umstürzlerischen Umgang mit technischen Verfahren' ( subversive approach to technical processes ), the artist creates collisions that reveal underlying structures and open up new spaces of imagination.
+
+    Opening:
+    8 March 2025 at 18:00
+
+    Opening times:
+    Fr, Sa 15.30–18.30, or by appointment: 01577 / 189 7275
+
+    Image credit
+    Title : GAME, 2003/2023,
+    Piezo Pigment Print, 120 x 90 cm (gerahmt)
+  title: 'At your fingertips I see my moving lips or not?'
+  date: '2025-03-09 00:00:00'
+  artist: 'Sylvia Heinrich'

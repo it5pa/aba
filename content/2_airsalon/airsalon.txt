@@ -1,0 +1,183 @@
+Title: Air Salon
+
+----
+
+Tagline:
+
+Every third Tuesday of the month.
+Colaboradio on (link: https://fr-bb.org/ text: Freie Radios).
+
+----
+
+Next-show: 0
+
+----
+
+Radio-shows:
+
+-
+  title: 'The List-Making Enthusiasm'
+  air_time: '2025-04-15'
+  host: 'Onur Karaoğlu'
+  guests: ''
+  description: |-
+    -People who make lists are organized.
+    -People who make lists think about all the features of an event or a situation in detail.
+    -Lists give people strength.
+    -People with a list do their work quickly.
+    -Lists facilitate communication with others.
+    -Lists lead people to an easy conclusion.
+    -Lists are actually a bit reductionist.
+  audio_link: ''
+-
+  title: 'Three Categories'
+  air_time: '2025-01-21'
+  host: 'Dóra Benyó'
+  guests: O.J.A.I.
+  description: "Central to the piece are the declassified secret service files compiled after the surveillance of Benyó's grandfather, a research engineer and political activist during Hungary's communist era. Our collaboration reimagines the architecture of the state archive, transforming it into a conceptual space representing totalitarian overreach through the excessive production of knowledge. O.J.A.I. contributes to this transformation by creating paranoid organizational atmospheres, conveyed through a series of fictional texts and modular sound compositions."
+  audio_link: '%2FABAAIR%2Fthree-categories%2F'
+  link: 'https://www.mixcloud.com/ABAAIR/three-categories/'
+-
+  title: 'however uncertainly, across space'
+  air_time: '2024-11-19'
+  host: 'Eloise Sweetman'
+  guests: 'Damon Zucconi'
+  description: |-
+    *However Uncertainly, Across Space* features audio from artist Damon Zucconi’s work *Jailbreak* alongside Eloise’s text *Not Knowing. Intimacy. A Door Ajar.* 
+
+    Throughout the radio show, listeners will experience the audio from Jailbreak, a video piece that presents a trembling portrayal of a chandelier. Its lights flicker—on, off, and on again—conveying a sense of instability and incompletion. The piece feels only partially present, existing both here and elsewhere. Overlaying the visuals are voices reading fragments of a text, their sources unseen—disembodied figures reaching toward something or someone distant and intangible.
+  audio_link: '%2FABAAIR%2Feloise-3333wav%2F'
+-
+  title: 'Nos plats aigres irritent vos palais'
+  air_time: '2024-06-18'
+  host: 'Stéphanie Rosianu'
+  guests: ''
+  description: 'The title of the play *Nos plats aigres irritent vos palais* (our sour dishes irritate your palates) is a phrase taken from the French version of Bertolt Brecht''s play "Antigone". This line, in its french translation, has a double meaning of the word « palais » which means both "der Gaumen, the palate" and "der Palast, the palace". This double layer embodies the will of this piece to create stories that can both irritate the palate and the palace of the privileged ones.The voices of the radio play have that in common that they challenge the system/cis-tem with words. Each of the voices tells stories that reclaim subjectivities different from the one inseminated by patriarchist and colonialist conceptions and other oppressive capitalist rules. Subjectivities who try to not rise above one and others, but connect and join to change the hegemonic euro-centric History into narratives that help us to build another meaning of being together on this planet.'
+  audio_link: '%2FABAAIR%2Fnos-plats-aigres-irritent-vos-palais%2F'
+-
+  title: 'voice memos'
+  air_time: '2024-05-21'
+  host: 'Paula Buškevica'
+  guests: ''
+  description: |-
+    This is a compilation of audible memories recorded over the past 8 years, which began with my first iphone, until then I must have had a nokia. there should be some recordings on there from longer ago, but I hold no hopes for being able to reach that far down. the oldest memo here was recorded in winter, the afternoon of the 7th of January, 2016. it plays the sound of having just stopped playing the piano at my dad's house in Jelgava, Latvia. I recorded these for no particular reason other than to keep the encounters near and have the option to reanimate them.
+
+    Otherwise available at (link: https://paulabuskevica.com/voicememos text: paulabuskevica.com/voicememos) – the web space that was used as the instrument for making this broadcast.
+  audio_link: '%2FABAAIR%2Fvoice-memos-paula-bu%25C5%25A1kevica%2F'
+-
+  title: 'How Many Linear Meters'
+  air_time: '2024-03-19'
+  host: 'Dóra Benyó'
+  guests: ''
+  description: |-
+    For her project whilst at the residency, Dóra Benyó got in touch with the Stasi Archive to learn more about their policy. The interview is about access to the files and how the Stasi Archive handles a request. Besides that, they discuss the international network between the archives of the former Eastern Bloc countries. How does the accessibility of the archive, and thus the accessibility of history, affect society and individuals?
+
+    The interview was held on 11 March 2024 by Dóra Benyó with Dr. Karsten Jedlitschka, Head of Division at the Stasi Records Archive, and Dr. Stephanie Jost, responsible for the cooperation in the Secret Police Archives Network.
+
+    Songs:
+    Ági és a fiúk - Veszélyes vonzerő
+    Illés – Nehéz Várni
+    A.E. Bizottság – Baab Schandau
+    Trabant – Esti kép
+    Kampec Dolores – Dzsungel
+    Sziámi – Elmaradott ország
+  audio_link: '%2FABAAIR%2Fd%25C3%25B3ra-beny%25C3%25B3-how-many-linear-meters%2F'
+-
+  title: 'Whisper me this'
+  air_time: '2024-02-20'
+  host: 'Elif Özbay Satanaya'
+  guests: ''
+  description: 'There were some voice notes, or it might as well have been some whispers in the dark. I sleep light, so I wake up again at 3:35, and this is what I see: the white sound machine is red, and my oil diffuser is violet. The LED strip combines magenta (magenta doesn’t exist) and orange—y—a high pitch of a broken-down fridge from upstairs. Only I can hear it. Flashback to: He laughs while blasting the radio - speakers wonky about to explode my eardrums. I can whisper you this, and only this.'
+  audio_link: '%2FABAAIR%2Fwhisper-me-this%2F'
+  link: 'https://www.mixcloud.com/ABAAIR/whisper_me/'
+-
+  title: 'Downpour Reverie'
+  air_time: '2023-11-21'
+  host: 'Tereza Glazova'
+  guests: ''
+  description: '*Downpour Reverie* is a musical hug for heavy rain, with 20 fervent tracks handpicked by the artist to plunge you into the emotional spirit when the sky pours its heart out.'
+  audio_link: '%2FABAAIR%2Fdownpour-reverie%2F'
+-
+  title: 'Cadavre Exquis'
+  air_time: '2023-06-20'
+  host: 'Nelson Beer'
+  guests: 'On Land Collective'
+  description: |-
+    Current ABA resident Nelson Beer has teamed up with Aram Abbas, Lore DeSelys and Varoujan Chetirian to reimagine the surrealist tradition of the *Cadavre Exquis* through a one hour radio-format "découpé" of auditory compositions. After giving themselves the task of producing fifteen one-minute audio files, each of the four players worked around sounds evoking “the habitat.” These sixty one-minute audio files were then assembled using a cut-up technique which consists of scrambling each file into a randomised order. 
+
+    An evocation of "otherness," the *Cadavre Exquis* emphasises variations in the style, experience, and sensibility of its participants. Chaperoned by reviews such as "playful," "fun," and "enriching," the game encourages players to recognise themselves upon discovery of the finished product. While simultaneously witnessing the collaborative birthing of a monster, players’ contrasting experiences, sensibilities and styles, if accepted, transform that monster into an expression of endeared alterity.
+
+    Furthermore, in the radio format which you are listening to, this cut-up technique occurs as a massive concentration of energy (MasCon), scrambling theme, structure and saturation, to the point where our temporal relationship to space transforms. Chronicles of the everyday are elucidated through the poetic rearrangement of sound, foregrounding the necessity of moving towards an approval of "difference" within the collective body (no vin nouveau).
+  audio_link: '%2FAirBerlin%2Fcadavre-exquis-with-on-land-collective%2F'
+-
+  title: Impressed
+  air_time: '2023-05-20'
+  host: 'Lieven Lahaye'
+  guests: ''
+  description: |-
+    This is a radio show about the writer Duncan Smith, the introduction is an abridged version of ‘Impressed’, a text I wrote in 2021 and originally published in Catalog issue 17.
+    Writer Duncan Smith (1954-1991) excels at making wild connections.
+    His essay, ‘Everybody wants exposure’ builds on the speculative relationship between the process of developing photographs and fading denim jeans.
+    ‘An interpretation of Elvis’ car-giving’ talks about exactly that: Elvis’ habit to give out Cadillacs and the interpretation of the name ‘Cadillac’ as a virtual rebus of events in Elvis’s life: ‘cad’: 50s slang for a bad boy, ‘ill’: ill and ‘lac’: lack.
+
+    Iggy and The Stooges - Gimme Danger
+    Gregg Bordowitz - Gimme Danger (lecture) [excerpt]
+    Devo - (I can’t get no) satisfaction (from ‘Kidnapped’, dir. Eric Mitchell, 1978)
+    DNA - Blonde Red Head (from ‘Downtown 81’, dir. Edo Bertoglio, 1980/2000)
+    ‘Elvis Presley's Pink Cadillac’ (GWAT TV YouTube channel)
+    James Chance and ...more
+  audio_link: '%2FABAAIR%2Fimpressed_lieven_lahaye_19072022%2F'
+  link: 'https://www.mixcloud.com/ABAAIR/impressed_lieven_lahaye_19072022/'
+-
+  title: 'Soup & Dialogue'
+  air_time: '2022-11-15'
+  host: 'Stefanie De Bakker'
+  guests: 'Elke Cuppens & Stef Lemmens '
+  description: |-
+    A joint listening session: collide with others, bring your leftover vegetables and create some soup while listening to this ABA Air SALON.
+
+    For this radio show, Stefanie De Bakker invites Elke Cuppens and Stef Lemmens to talk about food, collectivity, community, and living. These 60 minutes were created to gather, connect, inspire and relax.
+  audio_link: '%2FABAAIR%2Fsoup-dialogue-stefanie-de-bakker%2F'
+-
+  title: 'I AM SEVERAL'
+  air_time: '2021-11-16'
+  host: 'Marjolein van der Meer'
+  guests: ''
+  description: |-
+    In one hour radio piece, Marjolein van der Meer takes you on a journey through inspirations and explorations around her latest project *I AM SEVERAL*. This hour includes choir pieces, hip hop and some of her own musical and textual experiments. 
+
+    *I AM SEVERAL* is an electronic music piece leading up to a performance, using a polyphony of voices, from the inside and out, to address diversity. It is about the different people we can be, pluriformity versus surrender, the individual versus the group. The piece uses everyday situations, sounds and movement to create a certain unity, a choir of people in which each individual's autonomy can be reflected. This project is about finding ones voice, about being autonomous and the loneliness this can bring forth, but also about ways in which we are so elementary alike. Made in collaboration with choreographer Merel Franx.
+  audio_link: '%2FABAAIR%2Fi-am-several%2F'
+-
+  title: 'Sounds of Breaking Windows'
+  air_time: '2021-08-04'
+  host: 'Beatrijs Dikker & Julia Herfurth'
+  guests: ''
+  description: |-
+    A conversation with Lisette Smits (Curator, Researcher, Educator), Rosanna Lovell (Musician, Educator) and Jürg Andreas Meister (radio host, media composer)
+
+    During the two hour radio salon we will go into the practices of our guests, each working in their own way as programmer/curator/artist/collaborator/educator. We hope to connect different positions, find similarities and differences and learn from each others experience. We will talk about voice as an artistic medium, the practice of creating and giving a platform or space for particular voices as well as speaking vs listening. Alternately we will listen to short audio-fragments connected to the practices of our guests. We will listen and review them together during this two hour radio show.
+  audio_link: '%2FABAAIR%2Fsounds-of-breaking-windows-i%2F'
+-
+  title: ''
+  air_time: ''
+  host: ''
+  guests: ''
+  description: ''
+  audio_link: ''
+
+----
+
+About:
+
+Air Salon is a one hour long radio program composed by ABA artists-in-residence & guests, broadcasted via Colaboradio on Freie Radios Berlin.
+
+Initiated in 2018, the format invites visual artists, musicians, curators and other cultural practitioners to activate space through dialogue and collaboration, fostering a playful and experimental atmosphere to engage listeners.
+
+----
+
+Published-notes: Three Categories
+
+----
+
+Uuid: ZWZVZSlNpA6VJzXZ

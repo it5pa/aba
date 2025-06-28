@@ -1,0 +1,70 @@
+# Each page blueprint must have a title, the title may be different from the file name
+title: Airsalon
+
+# Each page can have an icon that is shown in page listings when no preview image is available.
+icon: 🎼
+
+# Define the form layout with two columns
+# More about columns: https://getkirby.com/docs/guide/blueprints/layout#defining-columns
+
+tabs:
+  content:
+    columns:
+      headline:
+        width: 1/2
+        fields:
+          tagline:
+            label: Headline
+            type: textarea
+            
+      next:
+        width: 1/2
+        fields:
+          next_show:
+            label: Next Show
+            type: select
+            options: query
+            query:
+              fetch: page.radio_shows.toStructure
+              text: "{{ structureItem.title }}"
+              value: "{{ structureItem.id }}"
+                
+      archive:
+        width: 1/1
+        fields:
+          radio_shows:
+            label: Radio Shows
+            type: structure
+            style: table
+            sortBy: air_time desc
+            fields:
+              title:
+                label: Title
+                type: text
+              air_time:
+                label: Air Time
+                type: date
+                time: false
+              host:
+                label: Host
+                type: text
+              guests:
+                label: Guests
+                type: text
+              description:
+                label: Description
+                type: textarea
+              audio_link:
+                label: Mixcloud Link
+                type: text
+  about: 
+    columns:
+      about:
+        width: 1/1
+        fields:
+          about:
+            label: About
+            type: textarea
+
+
+# More about pages sections: https://getkirby.com/docs/reference/panel/sections/pages
