@@ -14,19 +14,14 @@
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
 </head>
 <body style="width: 90vw">
-  <div class="header">
-  <div class="header-space-inner">
-    <!-- Toggle Button -->
-    <button class="menu-toggle" aria-label="Toggle menu"></button> 
-    <!-- Logo -->
-    <!-- <a href="https://airberlinalexanderplatz.de/" target="blank"><img src="<?= url('assets/icons/aba-web.svg') ?>" alt="ABA Logo" class="logo">
-    </a> -->
+<!-- ProjectSpace Button -->
+  <div class="space-navigation-projectspace">
+  <div class="space-navigation-projectspace-inner">
+    <a href="<?= $site->find('project-space')->url() ?>" 
+    class="space-navigation-projectspace-link" 
+    aria-label="Projectspace">
+    </a>  
   </div>
-    <nav class="menu">
-      <?php foreach ($site->children()->listed() as $item): ?>
-        <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>"><?= $item->title()->esc() ?></a>
-      <?php endforeach ?>
-    </nav>
 </div>
   <main class="main-airsalon">
 
@@ -39,16 +34,27 @@
   $nextShow = $page->radio_shows()->toStructure()->findBy('id', $nextShowId); // Find the show in the structure
   ?>
   <?php if ($nextShow): ?>
-    <h2 class="air-salon-headline">
-    <time datetime="<?= $nextShow->air_time()->toDate('c') ?>">
-        <?= $nextShow->air_time()->toDate('F j') ?>,16:00–17:00 <!-- Show air time -->
-      </time></br></br>
-      <span style="font-style:italic">
-        <a href="#show-<?= $nextShow->id() ?>" class="next-show-link">
-          <?= $nextShow->title()->esc() ?>
-        </a>
-      </span></br> 
-      <span><?= $nextShow->host()->esc() ?></span></br> <!-- Show host -->
+    <h2 class="air-salon-headline nextshow">
+
+      <?php
+            $airDate = $nextShow->air_time()->toDate('Y-m-d');
+            $today = date('Y-m-d');
+      ?>
+
+      <?php if ($airDate === $today): ?>
+        <span class="going-live">Today!</span><br>
+      <?php endif; ?>
+
+      <span style="font-style: italic">
+          <a href="#show-<?= $nextShow->id() ?>" class="next-show-link">
+            <?= $nextShow->title()->esc() ?>
+          </a>
+        </span><br>
+        <span><?= $nextShow->host()->esc() ?></span><br>
+
+        <time datetime="<?= $nextShow->air_time()->toDate('c') ?>">
+          <?= $nextShow->air_time()->toDate('F j') ?>, 16:00–17:00
+        </time>
     </h2>
   <?php else: ?>
     <h2 class="air-salon-headline">No upcoming shows at the moment – explore the archive.</h2>

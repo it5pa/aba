@@ -89,14 +89,89 @@ small {
   font-style: normal;
 }
 
+/* SPACES NAV */
 
-.header {
-  position: absolute;
-  top: 0;
+/* AIRSALON DOT */
+
+.space-navigation-air {
+  position: fixed;
+  bottom: 0;
   left: 0;
   z-index: 1000;
   max-width: 70px;
-  height: 300px;
+  height: 50px;
+
+}
+
+.space-navigation-air-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: #cacbd1;
+  cursor: pointer;
+  margin: 1rem;
+  transition-duration: 0.3s;
+}
+
+.space-navigation-air-link:hover {
+  background-color: #FF4A00;
+}
+
+/* .cursor-tooltip {
+  position: absolute;
+  top: -10px; 
+  color: #E8E6E6;
+  font-size: 20px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.space-navigation-air-link:hover .cursor-tooltip {
+  opacity: 1;
+} */
+
+/* PROJECTSPACE DOT */
+
+.space-navigation-projectspace {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  max-width: 70px;
+  height: 50px;
+
+}
+
+.space-navigation-projectspace-link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: #cacbd1;
+  cursor: pointer;
+  margin: 1rem;
+  transition-duration: 0.3s;
+}
+
+.space-navigation-projectspace-link:hover {
+  background-color: #30605E;
+}
+
+
+.header {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  max-width: 70px;
+  height: 50px;
 
 }
 
@@ -595,6 +670,17 @@ hr {
   text-decoration: underline;
 }
 
+
+.air-salon-headline .next-show-link {
+  display: inline-block;
+  padding-top: 0.5rem; /* or any value you prefer */
+}
+
+.next-show-link {
+  padding-top: 20px;
+}
+
+
 .airsalon-nextup {
   position: absolute;
   top: 55px;
@@ -612,6 +698,15 @@ hr {
 
 .airsalon-nextup a:hover{
   text-decoration: underline;
+}
+
+.air-salon-headline time {
+  padding-top: 0.5rem; /* or any value you prefer */
+  display: inline-block; /* ensures padding works vertically */
+}
+
+.going-live {
+  letter-spacing: 20px;
 }
 
 .airsalonintro {

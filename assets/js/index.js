@@ -206,12 +206,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Toggle Menu
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu');
+  // const toggle = document.querySelector('.menu-toggle');
+  // const menu = document.querySelector('.menu');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('open');
-  });
+  // toggle.addEventListener('click', () => {
+  //   menu.classList.toggle('open');
+  // });
 
   // Project space slider
 
