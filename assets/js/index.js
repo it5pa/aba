@@ -204,3 +204,159 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// Toggle Menu
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('open');
+  });
+
+  // Project space slider
+
+document.querySelectorAll('.projectspace-slider').forEach(slider => {
+  const slidesWrapper = slider.querySelector('.slides-wrapper');
+  const slides = slidesWrapper.querySelectorAll('.slide');
+  const leftZone = slider.querySelector('.left-zone');
+  const rightZone = slider.querySelector('.right-zone');
+  let index = 0;
+
+  const setPositionByIndex = () => {
+    const width = slider.offsetWidth;
+    const translateX = index * -width;
+    slidesWrapper.style.transform = `translateX(${translateX}px)`;
+  };
+
+  // --- Click zone handlers ---
+  const onLeftClick = () => {
+    if (index > 0) {
+      index--;
+      setPositionByIndex();
+    }
+  };
+
+  const onRightClick = () => {
+    if (index < slides.length - 1) {
+      index++;
+      setPositionByIndex();
+    }
+  };
+
+  // --- Drag/swipe handlers ---
+  let isDragging = false;
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let animationID;
+
+  const getPositionX = (event) => event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+
+  const animation = () => {
+    slidesWrapper.style.transform = `translateX(${currentTranslate}px)`;
+    if (isDragging) requestAnimationFrame(animation);
+  };
+
+  const touchStart = (event) => {
+    isDragging = true;
+    startPos = getPositionX(event);
+    animationID = requestAnimationFrame(animation);
+  };
+
+  const touchMove = (event) => {
+    if (!isDragging) return;
+    const currentPosition = getPositionX(event);
+    currentTranslate = prevTranslate + currentPosition - startPos;
+  };
+
+  const touchEnd = () => {
+    cancelAnimationFrame(animationID);
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+    if (movedBy < -100 && index < slides.length - 1) index++;
+    if (movedBy > 100 && index > 0) index--;
+    prevTranslate = index * -slider.offsetWidth;
+    currentTranslate = prevTranslate;
+    slidesWrapper.style.transform = `translateX(${currentTranslate}px)`;
+  };
+
+  // --- Enable desktop behavior ---
+  function enableDesktop() {
+    // Show click zones
+    if (leftZone) leftZone.style.display = 'block';
+    if (rightZone) rightZone.style.display = 'block';
+
+    // Add click zone listeners
+    if (leftZone) leftZone.addEventListener('click', onLeftClick);
+    if (rightZone) rightZone.addEventListener('click', onRightClick);
+
+    // Remove drag/swipe listeners
+    slidesWrapper.removeEventListener('touchstart', touchStart);
+    slidesWrapper.removeEventListener('touchmove', touchMove);
+    slidesWrapper.removeEventListener('touchend', touchEnd);
+    slidesWrapper.removeEventListener('mousedown', touchStart);
+    slidesWrapper.removeEventListener('mousemove', touchMove);
+    slidesWrapper.removeEventListener('mouseup', touchEnd);
+    slidesWrapper.removeEventListener('mouseleave', touchEnd);
+  }
+
+  // --- Enable mobile behavior ---
+  function enableMobile() {
+    // Hide click zones
+    if (leftZone) leftZone.style.display = 'none';
+    if (rightZone) rightZone.style.display = 'none';
+
+    // Remove click listeners
+    if (leftZone) leftZone.removeEventListener('click', onLeftClick);
+    if (rightZone) rightZone.removeEventListener('click', onRightClick);
+
+    // Add drag/swipe listeners
+    slidesWrapper.addEventListener('touchstart', touchStart, { passive: true });
+    slidesWrapper.addEventListener('touchmove', touchMove, { passive: true });
+    slidesWrapper.addEventListener('touchend', touchEnd);
+    slidesWrapper.addEventListener('mousedown', touchStart);
+    slidesWrapper.addEventListener('mousemove', touchMove);
+    slidesWrapper.addEventListener('mouseup', touchEnd);
+    slidesWrapper.addEventListener('mouseleave', touchEnd);
+  }
+
+  // --- Detect and initialize based on screen width ---
+  function checkDevice() {
+    if (window.innerWidth <= 768) {
+      enableMobile();
+    } else {
+      enableDesktop();
+    }
+  }
+
+  // Run on load
+  checkDevice();
+  setPositionByIndex();
+
+  // Run on resize
+  window.addEventListener('resize', () => {
+    checkDevice();
+    setPositionByIndex();
+  });
+
+  // Prevent image dragging
+  slidesWrapper.querySelectorAll('img').forEach(img => {
+    img.addEventListener('dragstart', e => e.preventDefault());
+  });
+});
+
+// Cursor blend mode
+
+document.querySelectorAll('.slide img').forEach(img => {
+  img.addEventListener('mouseenter', () => {
+    document.querySelectorAll('.click-zone').forEach(zone => {
+      zone.classList.add('blend-cursor');
+    });
+  });
+
+  img.addEventListener('mouseleave', () => {
+    document.querySelectorAll('.click-zone').forEach(zone => {
+      zone.classList.remove('blend-cursor');
+    });
+  });
+});

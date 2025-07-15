@@ -9,8 +9,50 @@ Currentexhibitions:
   artist: 'Isabelle Konrad & Gloria Müller'
   start_date: '2025-06-09'
   end_date: '2025-06-20'
+  image:
+    - 'file://VhAxkyjEl9rtPtrs'
+  description: |-
+    *It’s okay now* is an autobiographical work that, through the practice of remembering, questions, analyzes, and compares the origins and identities of the two protagonists. Remembering serves not only as a means of reflection but also as a form of dreaming and processing the past. Fictional scenes and archival material intertwine to create a narrative that merges personal and collective memories.
+
+
+    The exhibition is accompanied by an events programme including but not limited to karaoke.
+  bio: ''
+  website: ''
+-
+  title: Berlin–Wedding
+  artist: 'Carsten Lisecki'
+  start_date: '2025-07-04'
+  end_date: '2025-07-19'
+  image:
+    - 'file://fO0Ba5uFAsjebixY'
+  description: |-
+    Don't go there alone. Supervised corner for beginners and advanced players. Excursions into the surrounding area without sturdy shoes, seeing and being seen in good weather. Changing programme, activities and discussions about the neighborhood and what art has to do with it.
+
+    We are happy to welcome the artist Carsten Lisecki at our project space until the end of May. After just having published his book *Der Arbeitsaufenthalt als Beitrag zur Erholungsforschung*, Lisecki engaged with the space and developed new work.
+  bio: ''
+  website: ''
+-
+  title: 🌀Spiralling🌀
+  artist: 'Lysann König, Laurie Mlodzik & Linus Weber'
+  start_date: '2025-02-21'
+  end_date: ''
   image: []
-  description: 'It’s okay now is an autobiographical work that, through the practice of remembering, questions, analyzes, and compares the origins and identities of the two protagonists. Remembering serves not only as a means of reflection but also as a form of dreaming and processing the past. Fictional scenes and archival material intertwine to create a narrative that merges personal and collective memories.'
+  description: |-
+    Caught between emotions and emojis.
+    Motionless sharing,
+    shares and likes.
+    I like when there’s nothing…
+    When there’s nothing left to do!
+    Dividing the emotions
+    into Emo’s & -tion’s.
+    Dark shadowed eyes smiling at me,
+    when I come to this place to forget.
+    To this place, where I feel to much
+    but can stop thinking and just sink in.
+    Like under a thick cosy blanket,
+    where everything is dark and silent.
+  bio: ''
+  website: ''
 
 ----
 
@@ -18,15 +60,28 @@ Next-exhibition: 0
 
 ----
 
-Pastexhibitions:
+Intro: Coming Soon
+
+----
+
+Exhibitions-2024:
 
 -
-  title: ''
-  artist: ''
-  start_date: ''
-  end_date: ''
-  image: []
+  title: 'Uladzimir Hramovich & VEHA Archive'
+  artist: 'Ruins of Belarus'
+  start_date: '2024-11-09'
+  end_date: '2024-11-28'
   description: ''
+  bio: ''
+  website: ''
+
+----
+
+Exhibitions-2023: []
+
+----
+
+Exhibitions-2022: []
 
 ----
 
@@ -57,6 +112,25 @@ Schwedenstraße 16
 ----
 
 Email: amanda@airberlinalexanderplatz.de
+
+----
+
+Pastexhibitions:
+
+-
+  title: 'Ruins of Belarus'
+  artist: 'Uladzimir Hramovich & VEHA Archive'
+  start_date: '2024-11-09'
+  end_date: '2024-11-28'
+  image: []
+  description: |-
+    In his artistic work, Uladzimir Hramovich focuses on political movements and architecture in relation to their inherent history. His work is based on documentary material and complemented by subjective narratives.
+
+    Forced into exile, the Berlin-based artist is now cut off from the sources in Belarus. For the VEHA archive, Hramovich bought photographs on eBay of Belarusian monuments and their deterioration during the German occupation. In the exhibition Ruins of Belarus, he combines these images with other objects and attributes of power claimed by the current regime in Belarus. By manipulating them, Hramovich creates a critical reinterpretation and offers an alternative perspective to the hegemonic, centralized historiography.
+
+    After the exhibition, the images will be integrated into the collection of the independent VEHA archive. In the face of the horrific destruction in the neighbouring country, VEHA focuses on the destroyed architecture, villages and cities in Belarus that have fallen victim to war, modernisation, repression and the contempt of the current regime.
+  bio: 'Uladzimir Hramovich sees materials such as concrete, granite, metal, paper and paint not just as surfaces on which history leaves its mark, but as agents that themselves deform history. His artistic practice draws on the history of modernist art and architecture, the history of ideology and political movements.'
+  website: 'https://hramovich.com/'
 
 ----
 

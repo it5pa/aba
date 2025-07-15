@@ -60,13 +60,22 @@ tabs:
               image:
                 label: Image
                 type: files
-                multiple: false
+                multiple: true
                 help: "Please add a cover image for the exhibition here."
               description:
                 label: Description
                 type: textarea
                 size: large
                 help: "Please add a short description of the exhibition here."
+              bio:
+                label: Artist Bio
+                type: textarea
+                size: small
+                help: "If provided, please add a short bio of the artist here."
+              website:
+                label: Artist Website
+                type: url
+                width: 1/2
       - width: 1/3
         fields:
           next_exhibition:
@@ -77,48 +86,124 @@ tabs:
               fetch: page.currentexhibitions.toStructure
               text: "{{ structureItem.title }}"
               value: "{{ structureItem.id }}"
-    
   Archive:
+    label: Archive
     icon: archive
-    label: Archive 
     fields:
-      pastexhibitions:
-        label: Exhibitions and events
+      intro:
+        label: Intro
+        type: textarea
+
+      exhibitions_2024:
+        label: 2024
         type: structure
-        columns:
-          title: true
-          date: true
+        sortBy: start_date desc
         fields:
           title:
             label: Title
             type: text
-            width: 1/2
           artist:
             label: Artist
             type: text
-            width: 1/2
-          date_range:
-            label: Date Range
-            type: group
-            fields:
-              start_date:
-                label: Start Date
-                type: date
-                width: 1/2
-              end_date:
-                label: End Date
-                type: date
-                width: 1/2
-          image:
-            label: Image
-            type: files
-            multiple: false
-            help: "Please add a cover image for the exhibition here."
+          start_date:
+            label: Start Date
+            type: date
+            display: DD.MM.YYYY
+          end_date:
+            label: End Date
+            type: date
+            display: DD.MM.YYYY
           description:
             label: Description
             type: textarea
-            size: large
-            help: "Please add a short description of the exhibition here."
+        columns:
+          title:
+            width: 1/3
+          artist:
+            width: 1/3
+          date:
+            label: Date
+            type: info
+            text: "{{ start_date.toDate('d M') }} – {{ end_date.toDate('d M') }}"
+            width: 1/3
+
+
+      exhibitions_2023:
+        label: 2023
+        type: structure
+        sortBy: start_date desc
+        fields:
+          title:
+            label: Title
+            type: text
+          artist:
+            label: Artist
+            type: text
+          start_date:
+            label: Start Date
+            type: date
+            display: DD.MM.YYYY
+          end_date:
+            label: End Date
+            type: date
+            display: DD.MM.YYYY
+          description:
+            label: Description
+            type: textarea
+        columns:
+          title:
+            width: 1/3
+          artist:
+            width: 1/3
+          date:
+            label: Date
+            type: info
+            text: "{{ start_date.toDate('d M') }} – {{ end_date.toDate('d M') }}"
+            width: 1/3
+
+      exhibitions_2022:
+        label: 2022
+        type: structure
+        sortBy: start_date desc
+        fields:
+          title:
+            label: Title
+            type: text
+          artist:
+            label: Artist
+            type: text
+          start_date:
+            label: Start Date
+            type: date
+            display: DD.MM.YYYY
+          end_date:
+            label: End Date
+            type: date
+            display: DD.MM.YYYY
+          description:
+            label: Description
+            type: textarea
+          bio:
+            label: Artist Bio
+            type: textarea
+            size: small
+            help: "If provided, please add a short bio of the artist here."
+          website:
+            label: Artist Website
+            type: url
+            width: 1/2
+        columns:
+          title:
+            width: 1/3
+          artist:
+            width: 1/3
+          date:
+            label: Date
+            type: info
+            text: "{{ start_date.toDate('d M') }} – {{ end_date.toDate('d M') }}"
+            width: 1/3
+
+
   About:
     icon: info
     label: About

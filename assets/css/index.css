@@ -30,13 +30,14 @@ html {
   font-family: var(--font-family-sans);
   color: var(--color-text);
   background: var(--color-background);
+  scroll-behavior: smooth;
 }
 img {
   width: 100%;
 }
 body {
   /* padding: var(--padding); */
-  max-width: 80rem;
+  /* max-width: 80rem; */
   margin: 0 auto;
 }
 li {
@@ -90,40 +91,94 @@ small {
 
 
 .header {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: -1rem;
-  margin-left: -1rem;
-  margin-bottom: 6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  max-width: 70px;
+  height: 300px;
+
 }
 
 .logo {
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  cursor: pointer;
+  width: 25px;
 }
 
 .menu {
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: rotate(270deg);
+  transition: transform 0.4s ease, opacity 0.3s ease;
   display: flex;
+  flex-direction: row;
+  pointer-events: none; /* prevent clicks while hidden */
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem 0rem;
+  text-align: center;
+  position: relative;
+  top: 10rem;
+  width: 100%;
+  /* left: -10.6rem; */
 }
+
+.menu.open {
+ transform: rotate(270deg);
+  opacity: 1;
+  pointer-events: auto;
+  text-align: center; 
+}
+
+.menu-toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: #cacbd1;
+  cursor: pointer;
+  margin: 1rem;
+  transition-duration: 0.3s;
+}
+
+.menu-toggle:hover {
+  background-color: #FF4A00;
+}
+
 .menu a {
-  color: black;
-  padding: 1rem;
-  display: block;
+  color: #cacbd1;
+  /* display: block; */
+  font-size: 20px;
+  transition-duration: 0.3s;
 }
+
 .menu a:hover {
-  color: var(--color-code-green);
+  text-decoration: underline;
 }
+
 .menu a[aria-current] {
   text-decoration: underline;
+  /* transform:rotate(90deg); */
 }
 
 .main.home{
   background-color: grey; 
+}
+
+.home-nav {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px
+}
+
+.home-nav a{
+  font-size: 40px;
+}
+
+
+.home-nav a:hover{
+  color: grey;
 }
 
 .social {
@@ -717,12 +772,13 @@ html.projectspace, body.projectspace {
 }
 
 .projectspace-main {
-  margin: 220px;
+  margin: 70px 230px;
+  font-family: 'Hershey-Futural', sans-serif;
 }
 
 .projectspace-nav {
-  position: relative;
-  margin-top: 30px;
+  position: sticky;
+  top: 30px;
 }
 
 .projectspace-nav__links{
@@ -731,31 +787,91 @@ html.projectspace, body.projectspace {
   justify-content: space-between;
 }
 
-.projectspace-present-window {
-   background: #E8E6E6;
-    color: #30605E;
-    padding: 2rem;
-    height: 500px;
-    margin-bottom: 10rem;
-    position: relative;
-    overflow: scroll;
-}
-
-.projectspace-window-front {
-    position: relative;
-    height: 500px; 
-}
-
-h1.projectspace-title {
+.projectspace-slider {
   position: relative;
-  font-family: 'Hershey-Futural', sans-serif;
+  overflow: hidden;
+  touch-action: pan-y; /* allow horizontal swipe */
+  user-select: none;   /* prevent accidental selection */
+  margin-bottom: 200px;
+}
+
+
+.click-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  /* cursor: pointer; */
+  z-index: 5;
+  pointer-events: auto;
+}
+
+.left-zone {
+  left: 0;
+}
+
+.right-zone {
+  right: 0;
+}
+
+.left-zone:hover {
+  cursor: url('./icons/left-arrow.png'), auto; /* left arrow cursor */
+}
+
+.right-zone:hover {
+  cursor: url('./icons/right-arrow.png'), auto; /* left arrow cursor */
+}
+
+.blend-cursor {
+  mix-blend-mode: difference;
+}
+
+.slides-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: fit-content;
+}
+
+.slide {
+  aspect-ratio: 3 / 2; /* or 4 / 3, or 16 / 9 */
+  width: 100%;
+  max-height: 90vh;
+  padding: 0;
+  margin-bottom: 0;
+  /* min-width: 100%;
+  height: 500px; */
+  background: #E8E6E6;
   color: #30605E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  /* margin-bottom: 200px; Add spacing between slides */
+}
+
+.projectspace-slider img {
+    max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.projectspace-title {
+  font-family: 'Hershey-Futural', sans-serif;
+  font-size: 60px;
   text-align: center;
-  font-weight: 800;
-  font-size: 90px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-bottom: 1rem;
+}
+
+.projectspace-artist,
+.projectspace-date {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
 
 p.projectspace-artist{
@@ -763,7 +879,7 @@ p.projectspace-artist{
   color: #30605E;
   font-size: 20px;
   text-align: center;
-  bottom: 20px;
+  bottom: 0;
   width: 100%;
   left: 0;
   position: absolute;
@@ -780,6 +896,83 @@ p.projectspace-date {
   position: absolute;
 }
 
+.description {
+  max-width: 600px;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #30605E;
+  text-align: left;
+}
+
+.description p + p {
+  margin-top: 1em;
+}
+
+/* .prev-slide,
+.next-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #30605E;
+  z-index: 2;
+}
+
+.prev-slide {
+  left: 10px;
+}
+
+.next-slide {
+  right: 10px;
+} */
+
+.projectspace-slider.dragging {
+  cursor: grabbing;
+}
+
+.projectspace-slider .slide {
+  transition: transform 0.3s ease;
+}
+
+#projectspace-present {
+  margin-top: 50px;
+  scroll-margin-top: 80px;
+}
+
+.projectspace-present-window {
+   background: #E8E6E6;
+    color: #30605E;
+    height: 500px;
+    margin-bottom: 10rem;
+    position: relative;
+}
+
+.projectspace-window-front {
+    position: relative;
+    height: 500px; 
+}
+
+#archive-projectspace {
+  scroll-margin-top: 80px;
+  padding-top: 150px;
+}
+
+h1.projectspace-title {
+  position: relative;
+  font-family: 'Hershey-Futural', sans-serif;
+  color: #30605E;
+  text-align: center;
+  font-weight: 800;
+  font-size: 90px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 h2.projectspace {
   font-family: 'Hershey-Futural', sans-serif;
   color: #E8E6E6;
@@ -789,7 +982,7 @@ h2.projectspace {
 }
 
 #about-projectspace {
-scroll-behavior: smooth;
+scroll-margin-top: 30px;
 }
 
 .projectspace-nav__links a:hover{

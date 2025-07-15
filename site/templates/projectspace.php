@@ -1,29 +1,9 @@
-<?php
-/*
-  Snippets are a great way to store code snippets for reuse
-  or to keep your templates clean.
-
-  This header snippet is reused in all templates.
-  It fetches information from the `site.txt` content file
-  and contains the site navigation.
-
-  More about snippets:
-  https://getkirby.com/docs/guide/templates/snippets
-*/
-?>
 <!DOCTYPE html>
-<html lang="en" class="projectspace">
+<html lang="en" class=projectspace>
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <?php
-  /*
-    In the title tag we show the title of our
-    site and the title of the current page
-  */
-  ?>
   <?= css([
     'assets/css/prism.css',
     'assets/css/lightbox.css',
@@ -33,17 +13,33 @@
   <title><?= $site->title()->esc() ?> | <?= $page->title()->esc() ?></title>
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
 </head>
-<body class="projectspace">
+<body style="width: 90vw;">
+  <div class="header">
+  <div class="header-space-inner">
+    <!-- Toggle Button -->
+    <button class="menu-toggle" aria-label="Toggle menu"></button> 
+    <!-- Logo -->
+    <!-- <a href="https://airberlinalexanderplatz.de/" target="blank"><img src="<?= url('assets/icons/aba-web.svg') ?>" alt="ABA Logo" class="logo">
+    </a> -->
+  </div>
+    <nav class="menu">
+      <?php foreach ($site->children()->listed() as $item): ?>
+        <a <?php e($item->isOpen(), 'aria-current="page"') ?> href="<?= $item->url() ?>"><?= $item->title()->esc() ?></a>
+      <?php endforeach ?>
+    </nav>
+</div>
+  <main class="main-projectspace">
+
   <section class="projectspace-nav">
     <div class="projectspace-nav__inner">
       <nav class="projectspace-nav__links">
         <div class="projectspace-nav-left">
-        <p class="projectspace"><a href="<?=$page->url()?>">ABA Projectspace</a></p>
+        <p class="projectspace"><a href=#>ABA Projectspace</a></p>
           <p class="projectspace"><a href="#about-projectspace">About</a></p>
         </div>
         <div class="projectspace-nav-right">
-          <p class="projectspace"><a href="#Present">Upcoming & Recently</a></p>
-          <p class="projectspace"><a href="#Archive">Archive</a></p>
+            <p class="projectspace"><a href="#projectspace-present">Upcoming & Recently</a></p>
+          <p class="projectspace"><a href="#archive-projectspace">Archive</a></p>
         </div>  
       </nav>
     </div>
@@ -52,36 +48,68 @@
 <main class="projectspace-main">
   <section id="projectspace-present" class="projectspace-present">
   <?php foreach ($page->currentexhibitions()->toStructure() as $exhibition): ?>
-    <div class="projectspace-present-window">
-      <?php if ($start = $exhibition->date_range()->start_date()->toDate()): ?>
-        <p class="projectspace-date">
-          <?= $start->format('d M Y') ?>
-          <?php if ($end = $exhibition->date_range()->end_date()->toDate()): ?>
-            – <?= $end->format('d M Y') ?>
-          <?php endif ?>
-        </p>
-      <?php endif ?>
+    <div class="projectspace-slider">
+      <div class="slides-wrapper">
+          <!-- Slide 1: Title, Artist, Date -->
+          <div class="slide">
+            <?php 
+              $start = $exhibition->start_date()->isNotEmpty() ? $exhibition->start_date()->toDate() : null;
+              $end = $exhibition->end_date()->isNotEmpty() ? $exhibition->end_date()->toDate() : null;
+            ?>
+            <?php if ($start): ?>
+              <p class="projectspace-date">
+                <?php
+              $startDay = date('d', $start);
+              $startMonth = date('M', $start);
+              $startYear = date('Y', $start);
+              if ($end) {
+                $endDay = date('d', $end);
+                $endMonth = date('M', $end);
+                $endYear = date('Y', $end);
+                if ($startMonth === $endMonth && $startYear === $endYear) {
+                  // Only show day for start, full for end
+                  echo $startDay;
+                } else {
+                  // Show full start date
+                  echo date('d M Y', $start);
+                }
+                echo ' – ' . date('d M Y', $end);
+              } else {
+                // No end date, show full start date
+                echo date('d M Y', $start);
+              }
+                ?>
+              </p>
+            <?php endif ?>
+              </p>
+            <div class="projectspace-window-front">
+              <h1 class="projectspace-title"><?= $exhibition->title()->esc() ?></h1>
+              <p class="projectspace-artist"><?= $exhibition->artist()->esc() ?></p>
+            </div>
+          </div>
 
-      <div class="projectspace-window-front">
-        <h1 class="projectspace-title"><?= $exhibition->title()->esc() ?></h1>
-        <p class="projectspace-artist"><?= $exhibition->artist()->esc() ?></p>
+            <!-- Description Slide -->
+          <div class="slide">
+            <div class="description">
+              <?= $exhibition->description()->kirbytext() ?>
+            </div>
+          </div> 
+
+          <!-- Image Slide -->
+          <?php foreach ($exhibition->image()->toFiles() as $img): ?>
+            <div class="slide">
+              <img src="<?= $img->url() ?>" alt="Image for <?= $exhibition->title()->esc() ?>" />
+            </div>
+          <?php endforeach ?>
       </div>
-
-      <?php if ($image = $exhibition->image()->toFile()): ?>
-        <img src="<?= $image->url() ?>" alt="<?= $exhibition->title()->esc() ?>" />
-      <?php endif ?>
-
-      <div class="description">
-        <?= $exhibition->description()->kirbytext() ?>
-      </div>
+      <!-- Navigation Arrows (moved outside of .slides-wrapper) -->
+      <div class="click-zone left-zone"></div>
+      <div class="click-zone right-zone"></div> 
     </div>
   <?php endforeach ?>
 </section>
 
   <section id="about-projectspace">
-<?php if ($image = $page->content()->get('image')->toFile()): ?>
-  <img src="<?= $image->url() ?>" alt="Project Space Image">
-<?php endif ?>
     <div class="projectspace-about-columns">
       <div class="projectspace-about-column">
         <p><?= $page->about()->kt() ?></p>
@@ -93,7 +121,13 @@
         </p>
       </div>
     </div>
+    <!-- <?php if ($image = $page->content()->get('image')->toFile()): ?>
+       <img src="<?= $image->url() ?>" alt="Project Space Image">
+    <?php endif ?>  -->
   </section>
-</main>
+
+  <section id="archive-projectspace">
+    <p>Coming soon</p>
+</section>
 
 <?php snippet('footer') ?>

@@ -49,5 +49,6 @@
   ?>
   <link rel="shortcut icon" type="image/x-icon" href="<?= url('favicon.ico') ?>">
 </head>
+<?php snippet('nav') ?>
 <body>
   <main class="main">
